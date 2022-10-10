@@ -1,0 +1,26 @@
+ALGORITHM Sentence
+VAR
+    s:STRING:='';
+    l,nb_vowels,nb_words,i:INTEGER;
+BEGIN
+    l:=1;
+    i:=0;
+    nb_vowels:=0;
+    nb_words:=1;
+    WHILE (s[i]<>'.') DO
+        Read(s[i]);
+    l:=l+1;
+        IF (s[i]='a'OR s[i]='e'OR s[i]='i'OR s[i]='u'OR s[i]='o') THEN
+            nb_vowels:=nb_vowels+1;
+        END_IF
+
+        IF (s[i]=' ') THEN
+            nb_words=nb_words+1
+        END_IF
+      i:=i+1;  
+    END_WHILE
+
+    Write(l,nb_vowels,nb_words);
+
+
+END
